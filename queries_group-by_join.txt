@@ -1,5 +1,9 @@
-GROUP BY
+-- GROUP BY --
 1. Contare quanti iscritti ci sono stati ogni anno
+
+    SELECT YEAR(enrolment_date), COUNT(*) AS new_members
+    FROM `students`
+    GROUP BY YEAR(enrolment_date);
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
@@ -8,7 +12,7 @@ GROUP BY
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 
-JOIN
+-- JOIN --
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
 
 2. Selezionare tutti i Corsi di Laurea del Dipartimento di Neuroscienze
