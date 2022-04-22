@@ -7,10 +7,21 @@
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
+    SELECT `office_address`, COUNT(*) AS office_teachers
+    FROM `teachers`
+    GROUP BY office_address;
+
 3. Calcolare la media dei voti di ogni appello d'esame
+
+    SELECT `exam_id`, AVG(vote) AS average_marks
+    FROM `exam_student`
+    GROUP BY exam_id;
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
+    SELECT department_id, COUNT(*) AS degrees_num
+    FROM `degrees`
+    GROUP BY department_id
 
 -- JOIN --
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
@@ -23,7 +34,7 @@
 
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
-6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (70)
 
 7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
 
